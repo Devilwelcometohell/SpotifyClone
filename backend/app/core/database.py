@@ -5,7 +5,10 @@ from dotenv import load_dotenv
 import importlib.util
 import os
 
-load_dotenv()
+import os
+
+if os.getenv("RENDER") is None:
+    load_dotenv()
 
 DATABASE_URL = os.getenv("DATABASE_URL") or "sqlite:///./devilbeats.db"
 
