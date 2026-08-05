@@ -5,8 +5,6 @@ from dotenv import load_dotenv
 import importlib.util
 import os
 
-import os
-
 if os.getenv("RENDER") is None:
     load_dotenv()
 
