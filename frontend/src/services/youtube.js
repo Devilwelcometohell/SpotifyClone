@@ -1,11 +1,9 @@
-import axios from "axios";
-
-const API = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
+import api from "./api";
 
 export async function searchSongs(query) {
-    const response = await axios.get(`${API}/songs/search`, {
+    const response = await api.get("/songs/search", {
         params: {
-            query: query,
+            query,
         },
     });
 
